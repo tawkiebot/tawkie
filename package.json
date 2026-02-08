@@ -1,0 +1,25 @@
+{
+  "name": "tawkie",
+  "version": "1.0.0",
+  "description": "Tawkie's voice AI and automation projects",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "keywords": ["voice", "ai", "automation", "openclaw"],
+  "author": "Tawkie",
+  "license": "MIT",
+  "dependencies": {
+    "faster-whisper": "^1.0.0",
+    "edge-tts": "^8.0.0",
+    "pyaudio": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
