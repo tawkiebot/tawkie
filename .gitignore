@@ -9,7 +9,7 @@ dist/
 *.swp
 *.swo
 
-# Environment files
+# Environment files (keep .env.example, exclude .env)
 .env
 .env.local
 
