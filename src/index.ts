@@ -1,18 +1,21 @@
 // src/index.ts
 // Tawkie's Voice AI Project — Main Entry Point
 
+import { SpeakEasy, speak, CONFIG_FILE } from '@arach/speakeasy';
+
 interface VoiceConfig {
     sampleRate: number;
     channels: number;
-    sttEngine: string;
-    ttsEngine: string;
+    provider: string;
 }
 
 class VoiceAgent {
     private config: VoiceConfig;
+    private tts: typeof speak;
     
     constructor(config: VoiceConfig) {
         this.config = config;
+        this.tts = speak; // Using @arach/speakeasy!
     }
     
     greet(): string {
@@ -20,17 +23,11 @@ class VoiceAgent {
     }
     
     info(): string {
-        return `Config: ${this.config.sampleRate}Hz, ${this.config.channels} channel(s), STT: ${this.config.sttEngine}, TTS: ${this.config.ttsEngine}`;
+        return `Config: ${this.config.sampleRate}Hz, ${this.config.channels} channel(s), Provider: ${this.config.provider}`;
     }
     
-    async processAudio(audioPath: string): Promise<string> {
-        // Placeholder for STT processing
-        return `Processed audio from ${audioPath}`;
-    }
-    
-    async generateSpeech(text: string): Promise<string> {
-        // Placeholder for TTS generation
-        return `Generated speech for: "${text}"`;
+    async say(text: string): Promise<void> {
+        await this.tts(text);
     }
 }
 
@@ -38,8 +35,7 @@ class VoiceAgent {
 const agent = new VoiceAgent({
     sampleRate: 16000,      // 16kHz — ideal for Whisper
     channels: 1,            // Mono
-    sttEngine: "faster-whisper",
-    ttsEngine: "edge-tts"
+    provider: "arach"       // Using @arach/speakeasy!
 });
 
 console.log("🤖 Tawkie's Voice AI Project");
@@ -47,5 +43,6 @@ console.log("============================\n");
 
 console.log(agent.greet());
 console.log(agent.info());
+console.log("\nTry: await agent.say('Hello from Tawkie!')");
 
 export { VoiceAgent, VoiceConfig };
