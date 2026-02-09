@@ -1,0 +1,14 @@
+{
+  "v": "v2025",
+  "name": "tawkie",
+  "artifacts": [
+    "src/functions/*.ts",
+    "convex/schema.ts"
+  ],
+  "functions": {
+    "src/functions/**/*.ts": {
+      "name": "functions"
+    }
+  },
+  "provider": "nodejs22.x"
+}
