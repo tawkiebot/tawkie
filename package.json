@@ -9,15 +9,23 @@
     "start": "node dist/index.js",
     "test": "jest"
   },
-  "keywords": ["voice", "ai", "automation", "openclaw"],
+  "keywords": [
+    "voice",
+    "ai",
+    "automation",
+    "openclaw"
+  ],
   "author": "Tawkie",
   "license": "MIT",
   "dependencies": {
-    "@arach/speakeasy": "latest"
+    "@arach/speakeasy": "latest",
+    "dotenv": "^17.2.4",
+    "imap": "^0.8.19",
+    "mailparser": "^3.9.3"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0"
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   }
 }

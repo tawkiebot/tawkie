@@ -2,8 +2,7 @@
   "v": "v2025",
   "name": "tawkie",
   "artifacts": [
-    "src/functions/*.ts",
-    "convex/schema.ts"
+    "src/functions/schema.ts"
   ],
   "functions": {
     "src/functions/**/*.ts": {

@@ -1,4 +1,4 @@
-// convex/claims.ts
+// src/functions/claims.ts
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import { nanoid } from "nanoid";

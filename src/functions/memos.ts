@@ -1,4 +1,4 @@
-// convex/memos.ts
+// src/functions/memos.ts
 import { query, mutation } from "./_generated/server";
 import { v } from "convex/values";
 import { nanoid } from "nanoid";

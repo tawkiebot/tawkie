@@ -4,6 +4,7 @@
 import { SpeakEasy, speak, CONFIG_FILE } from '@arach/speakeasy';
 import * as fs from 'fs';
 import * as path from 'path';
+import 'dotenv/config';
 
 interface VoiceConfig {
     sampleRate: number;
